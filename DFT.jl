@@ -1,3 +1,5 @@
+using Printf
+
 signal = [1, -1, 5, -3, 1, -3, 0, 0] #入力信号
 
 N = length(signal)
@@ -15,5 +17,6 @@ for i in 1:N
     push!(Im, im)
 end
 
-println(Re)
-println(Im)
+for i in 1:N
+    @printf("%10f%10f\n", Re[i], Im[i])
+end
